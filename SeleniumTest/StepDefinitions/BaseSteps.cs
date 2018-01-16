@@ -13,15 +13,13 @@ namespace SeleniumTest
     [Binding]
     public class BasicSteps
     {
-        private static IWebDriver driver;
+        IWebDriver driver = Variables.driver;
         
 
         [BeforeScenario]
-       
         public void BeforeScenario()
         {
-            driver = new ChromeDriver();
-            
+      
          
         }
 
