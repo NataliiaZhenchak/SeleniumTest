@@ -67,6 +67,7 @@
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\TestSteps.cs" />
+    <Compile Include="Variables.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

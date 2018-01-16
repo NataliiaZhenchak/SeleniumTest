@@ -11,18 +11,21 @@ namespace SeleniumTest.StepDefinitions
     [Binding]
     public class TestSteps
     {
-        IWebDriver driver;
+       
 
         [Given(@"I open Infision web site")]
         public void IOpenInfisionWebSite()
         {
-            driver = new ChromeDriver();
+
+            Variables driver = new Variables;
             driver.Url = "https://www.infusion.com/";
         }
 
         [When(@"I go to Careers drop down")]
         public void IGoToCareersDropDown()
         {
+
+            Variables driver = new Variables();
             HomePage homePage = new HomePage(driver);
             Actions action = new Actions(driver);
             action.MoveToElement(homePage.CareersButton).Perform();

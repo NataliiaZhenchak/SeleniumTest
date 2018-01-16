@@ -12,7 +12,6 @@ namespace SeleniumTest.Pages
     public class HomePage: BasePage
 
     {
-        //public IWebDriver driver;
         public HomePage(IWebDriver driver)
             :base(driver)
         {

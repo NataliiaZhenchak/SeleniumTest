@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,34 @@ using TechTalk.SpecFlow;
 
 namespace SeleniumTest
 {
-
+    
     [Binding]
-    class BasicSteps
+    public class BasicSteps
     {
+        private static IWebDriver driver;
+        
 
         [BeforeScenario]
+       
+        public void BeforeScenario()
+        {
+            driver = new ChromeDriver();
+            
+         
+        }
+
+        [AfterScenario]
+        public void AfterScenario()
+        {
+           
+        }
+
+    }
+
+   
+        
      
 
         
-    }
+    
 }
