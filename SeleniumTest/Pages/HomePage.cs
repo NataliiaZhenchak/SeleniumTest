@@ -23,6 +23,11 @@ namespace SeleniumTest.Pages
             set { }
         }
 
+        public IWebElement YourCareerButton
+        {
+            get { return driver.FindElement(By.XPath("//ul[@class='dropdown-menu second-dropdown lessthan10']/li/a[text()='Your Career']")); }
+            set { }
+        }
 
 
     }

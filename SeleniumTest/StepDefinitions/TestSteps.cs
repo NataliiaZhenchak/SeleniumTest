@@ -28,5 +28,13 @@ namespace SeleniumTest.StepDefinitions
             action.MoveToElement(homePage.CareersButton).Perform();
 
         }
+
+        [When(@"I clcik Your Career")]
+        public void IClickYourCareer()
+        {
+            HomePage homePage = new HomePage(driver);
+            homePage.YourCareerButton.Click();
+
+        }
     }
 }
