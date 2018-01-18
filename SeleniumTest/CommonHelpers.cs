@@ -8,6 +8,9 @@ namespace SeleniumTest
 {
     class CommonHelpers
     {
-
+        public static  CreateWebElement()
+        {
+            return;
+        }
     }
 }

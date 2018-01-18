@@ -19,14 +19,14 @@ namespace SeleniumTest
         [BeforeScenario]
         public void BeforeScenario()
         {
-      
-         
+            driver.Manage().Window.Maximize();
+            driver.Url = "https://www.infusion.com/";
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-           
+           // driver.Close();
         }
 
     }

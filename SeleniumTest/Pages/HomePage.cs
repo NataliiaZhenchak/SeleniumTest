@@ -17,6 +17,12 @@ namespace SeleniumTest.Pages
         {
         }
 
+        public IWebElement YourCareerText
+        {
+            get { return driver.FindElement(By.XPath("//h1[@class='feature-title']")); }
+            set { }
+        }
+
         public IWebElement CareersButton
         {
             get { return driver.FindElement(By.XPath("//div[@id='main-navbar']//a[text()='Careers']")); }

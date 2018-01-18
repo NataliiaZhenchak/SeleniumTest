@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using SeleniumTest.Pages;
@@ -9,15 +10,16 @@ using TechTalk.SpecFlow;
 namespace SeleniumTest.StepDefinitions
 {
     [Binding]
-    public class TestSteps
+    public class HomeSteps
     {
         IWebDriver driver = Variables.driver;
 
-        [Given(@"I open Infision web site")]
-        public void IOpenInfisionWebSite()
+        [Given(@"I am on Home page")]
+        public void IAmOnHomePage()
         {
+            HomePage homePage = new HomePage(driver);
+            Assert.IsTrue(homePage.YourCareerText.Displayed, "Eleement not present");
 
-            driver.Url = "https://www.infusion.com/";
         }
 
         [When(@"I go to Careers drop down")]
