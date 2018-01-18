@@ -27,7 +27,8 @@ namespace SeleniumTest.StepDefinitions
         public void IEneterTextInSearchField(String keyword)
         {
             SearchJobPage searchPage = new SearchJobPage(driver);
-            searchPage.SearchField.SendKeys(keyword);
+            CommonHelpers.FindWebElement(searchPage.searchField, driver).Click();
+            searchPage.SearchField;
 
         }
 

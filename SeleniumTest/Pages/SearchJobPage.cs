@@ -14,7 +14,14 @@ namespace SeleniumTest.Pages
         {
         }
 
-        public string searchField = "//*[@id='searchboxfilter']";
+        public string searchField = "//*[@id='searchbox']";
+
+        public SearchJobPage SelectCountry()
+        {
+            CommonHelpers.FindWebElement(searchField).Click();
+            return this;
+        }
+
         public IWebElement SearchField
         {
             get { return driver.FindElement(By.Id("searchbox")); }
@@ -39,11 +46,7 @@ namespace SeleniumTest.Pages
             return this;
         }
 
-        public SearchJobPage SelectCountry(String location)
-        {
-            driver.FindElement(By.LinkText(location)).Click();
-            return this;
-        }
+        
 
     }
 }
