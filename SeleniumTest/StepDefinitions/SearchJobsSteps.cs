@@ -1,5 +1,6 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SeleniumTest.Pages;
 using System;
 using System.Collections.Generic;
@@ -14,29 +15,17 @@ namespace SeleniumTest.StepDefinitions
     class SearchJobsSteps
     {
         IWebDriver driver = Variables.driver;
+        SearchJobsPage searchPage;
 
-        [When(@"I scroll to Search field")]
-        public void IScrollToSearchField()
+        public SearchJobsSteps()
         {
-            SearchJobPage searchPage = new SearchJobPage(driver);
-            Actions action = new Actions(driver);
-            action.MoveToElement(searchPage.SearchField).Perform();
-
-        }
-        [When(@"I eneter ""(.*)"" in Search field")]
-        public void IEneterTextInSearchField(String keyword)
-        {
-            SearchJobPage searchPage = new SearchJobPage(driver);
-            CommonHelpers.FindWebElement(searchPage.searchField, driver).Click();
-            searchPage.SearchField;
-
+            searchPage = new SearchJobsPage(driver);
         }
 
-        [When(@"I select ""(.*)"" location")]
-        public void ISelectLocation(String location)
+        [Then(@"""(.*)"" of serach are shown")]
+        public void VerifySearchResults(String result)
         {
-            SearchJobPage searchPage = new SearchJobPage(driver);
-            searchPage.SelectLocationDropDown().SelectCountry(location);
+            Assert.AreEqual(result, searchPage.GetsearchResultElement().Text, "Search results are incorrect");
 
         }
     }

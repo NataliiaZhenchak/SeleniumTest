@@ -58,7 +58,8 @@
   <ItemGroup>
     <Compile Include="CommonHelpers.cs" />
     <Compile Include="Pages\BasePage.cs" />
-    <Compile Include="Pages\SearchJobPage.cs" />
+    <Compile Include="Pages\CareersPage.cs" />
+    <Compile Include="Pages\SearchJobsPage.cs" />
     <Compile Include="StepDefinitions\BaseSteps.cs" />
     <Compile Include="Feature\Search.feature.cs">
       <AutoGen>True</AutoGen>
@@ -68,6 +69,7 @@
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\HomeSteps.cs" />
+    <Compile Include="StepDefinitions\CareersSteps.cs" />
     <Compile Include="StepDefinitions\SearchJobsSteps.cs" />
     <Compile Include="Variables.cs" />
   </ItemGroup>

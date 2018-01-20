@@ -13,29 +13,32 @@ namespace SeleniumTest.StepDefinitions
     public class HomeSteps
     {
         IWebDriver driver = Variables.driver;
+        HomePage homePage;
+        
+        public HomeSteps()
+        {
+            homePage = new HomePage(driver);
+        }
 
         [Given(@"I am on Home page")]
         public void IAmOnHomePage()
         {
-            HomePage homePage = new HomePage(driver);
-            Assert.IsTrue(homePage.YourCareerText.Displayed, "Eleement not present");
+            Assert.IsTrue(homePage.GetAvanadeFeatureBlock().Displayed, "Eleement not present");
 
         }
 
-        [When(@"I go to Careers drop down")]
-        public void IGoToCareersDropDown()
+        [When(@"I go to ""(.*)"" drop down")]
+        public void IGoToCareersDropDown(string elementName)
         {
-            HomePage homePage = new HomePage(driver);
             Actions action = new Actions(driver);
-            action.MoveToElement(homePage.CareersButton).Perform();
+            action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
 
         }
 
-        [When(@"I clcik Your Career")]
-        public void IClickYourCareer()
+        [When(@"I clcik ""(.*)"" item")]
+        public void IClickDropDownItem(string elementName)
         {
-            HomePage homePage = new HomePage(driver);
-            homePage.YourCareerButton.Click();
+            homePage.GetDropDownElement(elementName).Click();
 
         }
     }
