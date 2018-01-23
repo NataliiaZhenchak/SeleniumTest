@@ -28,5 +28,19 @@ namespace SeleniumTest.StepDefinitions
             Assert.AreEqual(result, searchPage.GetsearchResultElement().Text, "Search results are incorrect");
 
         }
+
+        [Then(@"at least 1 result is shown")]
+        public void VerifyAtLeastOneSearchResult()
+        {
+            Assert.IsTrue(searchPage.GetAllSearchResultElement().Displayed, "Eleement not present");
+
+        }
+
+        [When(@"I select ""(.*)"" offer")]
+        public void ISelectOffer(String offerName)
+        {
+            searchPage.GetOfferElement(offerName).Click();
+
+        }
     }
 }
