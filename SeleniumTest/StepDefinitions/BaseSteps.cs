@@ -13,7 +13,8 @@ namespace SeleniumTest
     [Binding]
     public class BasicSteps
     {
-        IWebDriver driver = Variables.driver;
+       // IWebDriver driver = Variables.driver;
+        IWebDriver driver = Variables.Init();
         
 
         [BeforeScenario]
