@@ -13,14 +13,12 @@ namespace SeleniumTest
 {
     public class Variables
     {
-        public static IWebDriver driver;  // = new ChromeDriver();
-
-        public static string browser = ConfigurationManager.AppSettings["browser"];
-
+        public static IWebDriver driver;  
+        
         public static IWebDriver Init()
         {
-            IWebDriver driver = null;
-            switch (browser)
+         
+            switch (ConfigurationManager.AppSettings["browser"])
             {
                
                 case "Chrome":
@@ -29,11 +27,12 @@ namespace SeleniumTest
                 case "IE":
                     driver = new InternetExplorerDriver();
                     break;
-                case "Firefox":
+                case "FireFox":
                     driver = new FirefoxDriver();
                     break;
             }
             return driver;
+
 
         }
     }
