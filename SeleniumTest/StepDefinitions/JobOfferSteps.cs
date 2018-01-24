@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using static SeleniumTest.Variables;
 
 namespace SeleniumTest.StepDefinitions
 {
     [Binding]
     class JobOfferSteps
     {
-        IWebDriver driver = Variables.driver;
         JobOfferPage jobOfferPage;
 
         public JobOfferSteps()

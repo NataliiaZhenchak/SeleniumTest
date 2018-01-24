@@ -13,9 +13,9 @@ namespace SeleniumTest
 {
     public class Variables
     {
-        public static IWebDriver driver;  
+        public static IWebDriver driver;
         
-        public static IWebDriver Init()
+        public static void Init()
         {
          
             switch (ConfigurationManager.AppSettings["browser"])
@@ -30,9 +30,10 @@ namespace SeleniumTest
                 case "FireFox":
                     driver = new FirefoxDriver();
                     break;
+                default:
+                    driver = new ChromeDriver();
+                    break;
             }
-            return driver;
-
 
         }
     }

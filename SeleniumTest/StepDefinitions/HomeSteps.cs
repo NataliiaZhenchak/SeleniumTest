@@ -5,14 +5,13 @@ using OpenQA.Selenium.Interactions;
 using SeleniumTest.Pages;
 using System;
 using TechTalk.SpecFlow;
-
+using static SeleniumTest.Variables;
 
 namespace SeleniumTest.StepDefinitions
 {
     [Binding]
     public class HomeSteps
     {
-        IWebDriver driver = Variables.driver;
         HomePage homePage;
         
         public HomeSteps()

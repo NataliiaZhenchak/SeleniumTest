@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using static SeleniumTest.Variables;
 
 namespace SeleniumTest.StepDefinitions
 {
     [Binding]
     class CareersSteps
     {
-        IWebDriver driver = Variables.driver;
+
         CareersPage careersPage;
 
         public CareersSteps()
@@ -26,6 +27,7 @@ namespace SeleniumTest.StepDefinitions
         {
             Actions action = new Actions(driver);
             action.MoveToElement(careersPage.GetSearchField()).Perform();
+
 
         }
         [When(@"I eneter ""(.*)"" in Search field")]

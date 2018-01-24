@@ -12,7 +12,8 @@ namespace SeleniumTest.Pages
     public class HomePage: BasePage
     {
         public string avanadeFeatureBlock = "//h1[@class='feature-title']";
-      
+
+
         public HomePage(IWebDriver driver)
             :base(driver)
         {
@@ -20,7 +21,7 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetAvanadeFeatureBlock()
         {
-           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock);
+           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock, 5);
            return featureBlockElement; 
         }
 

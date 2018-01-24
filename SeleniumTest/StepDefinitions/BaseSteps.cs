@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using static SeleniumTest.Variables;
 
 namespace SeleniumTest
 {
@@ -13,13 +14,11 @@ namespace SeleniumTest
     [Binding]
     public class BasicSteps
     {
-       // IWebDriver driver = Variables.driver;
-        IWebDriver driver = Variables.Init();
-        
 
         [BeforeScenario]
         public void BeforeScenario()
         {
+            Init();
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.infusion.com/";
         }
@@ -27,7 +26,7 @@ namespace SeleniumTest
         [AfterScenario]
         public void AfterScenario()
         {
-            //driver.Close();
+           // driver.Close();
         }
 
     }
