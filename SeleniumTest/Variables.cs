@@ -19,22 +19,30 @@ namespace SeleniumTest
 
         public static void Init()
         {
-         
-            switch (ConfigurationManager.AppSettings["browser"])
+            var browser = ConfigurationManager.AppSettings["browser"];
+
+            if (browser == "Chrome")
             {
-               
-                case "Chrome":
-                    driver = new ChromeDriver();
-                    break;
-                case "IE":
-                    driver = new InternetExplorerDriver();
-                    break;
-                case "FireFox":
-                    driver = new FirefoxDriver();
-                    break;
-                default:
-                    driver = new ChromeDriver();
-                    break;
+                driver = new ChromeDriver();
+            }
+            else if (browser == "IE")
+            {
+                
+                InternetExplorerOptions options = new InternetExplorerOptions();
+                options.EnableNativeEvents = false;
+                options.UnhandledPromptBehavior = UnhandledPromptBehavior.Accept;
+                options.IgnoreZoomLevel = true;
+                options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+                options.EnablePersistentHover = true;
+                driver = new InternetExplorerDriver(options);
+            }
+            else if (browser == "FireFox")
+            {
+                driver = new FirefoxDriver();
+            }
+            else
+            {
+                driver = new ChromeDriver();
             }
 
         }

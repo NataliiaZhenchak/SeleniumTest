@@ -30,10 +30,10 @@ namespace SeleniumTest.StepDefinitions
         [When(@"I go to ""(.*)"" drop down")]
         public void IGoToCareersDropDown(string elementName)
         {
-            //Actions action = new Actions(driver);
-            //action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
+            Actions action = new Actions(driver);
+            action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
             //Thread.Sleep(5000);
-            homePage.GetNavigationBarElement(elementName).Click();
+           // homePage.GetNavigationBarElement(elementName).Click();
 
 
         }
