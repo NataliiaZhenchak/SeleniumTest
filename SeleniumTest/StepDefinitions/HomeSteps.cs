@@ -4,6 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using SeleniumTest.Pages;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 using static SeleniumTest.Variables;
 
@@ -29,8 +30,11 @@ namespace SeleniumTest.StepDefinitions
         [When(@"I go to ""(.*)"" drop down")]
         public void IGoToCareersDropDown(string elementName)
         {
-            Actions action = new Actions(driver);
-            action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
+            //Actions action = new Actions(driver);
+            //action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
+            //Thread.Sleep(5000);
+            homePage.GetNavigationBarElement(elementName).Click();
+
 
         }
 

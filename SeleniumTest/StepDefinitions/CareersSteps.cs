@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using static SeleniumTest.Variables;
@@ -25,8 +26,10 @@ namespace SeleniumTest.StepDefinitions
         [When(@"I scroll to Search field")]
         public void IScrollToSearchField()
         {
-            Actions action = new Actions(driver);
-            action.MoveToElement(careersPage.GetSearchField()).Perform();
+            //Actions action = new Actions(driver);
+            ((IJavaScriptExecutor)driver).ExecuteScript("javascript:window.scrollBy(250,350)", careersPage.GetSearchField());
+            Thread.Sleep(1000);
+            //  action.MoveToElement(careersPage.GetSearchField()).Perform();
 
 
         }

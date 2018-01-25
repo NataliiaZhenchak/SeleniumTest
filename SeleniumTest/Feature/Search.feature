@@ -21,12 +21,12 @@ Scenario: Verify search results by location
 
 Scenario: Verify qualification for job offer
 	Given I am on Home page
-	When I go to "Careers" drop down
-	And I clcik "Your Career" item
-	And I scroll to Search field
-	And I eneter "Business Analyst" in Search field
-	And I select "United States" location
-	And I click Search button
-	And I select "Business Solution Architect - Houston, TX" offer
-	Then "Business Solution Architect - Houston, TX" offer is shown
-	And I can see "You are flexible with travel." qualification
+	When I go to "Thinking" drop down
+	#And I clcik "Your Career" item
+	#And I scroll to Search field
+	#And I eneter "Business Analyst" in Search field
+	#And I select "United States" location
+	#And I click Search button
+	#And I select "Business Solution Architect - Houston, TX" offer
+	#Then "Business Solution Architect - Houston, TX" offer is shown
+	#And I can see "You are flexible with travel." qualification

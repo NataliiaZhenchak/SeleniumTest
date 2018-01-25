@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using static SeleniumTest.Variables;
@@ -25,6 +26,7 @@ namespace SeleniumTest.StepDefinitions
         [Then(@"""(.*)"" of serach are shown")]
         public void VerifySearchResults(String result)
         {
+         
             Assert.AreEqual(result, searchPage.GetsearchResultElement().Text, "Search results are incorrect");
 
         }

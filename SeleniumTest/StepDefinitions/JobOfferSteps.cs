@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using static SeleniumTest.Variables;
@@ -31,8 +32,10 @@ namespace SeleniumTest.StepDefinitions
         [Then(@"I can see ""(.*)"" qualification")]
         public void IScrollToQualifications(String qualificationType)
         {
-            Actions action = new Actions(driver);
-            action.MoveToElement(jobOfferPage.GetQualificationElement(qualificationType)).Perform();
+            //Actions action = new Actions(driver);
+            //action.MoveToElement(jobOfferPage.GetQualificationElement(qualificationType)).Perform();
+            ((IJavaScriptExecutor)driver).ExecuteScript("javascript:window.scrollBy(250,350)", jobOfferPage.GetQualificationElement(qualificationType));
+            Thread.Sleep(1000);
             Assert.AreEqual(qualificationType, jobOfferPage.GetQualificationElement(qualificationType).Text, "Results are incorrect");
 
         }

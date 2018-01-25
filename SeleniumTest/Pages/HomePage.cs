@@ -21,7 +21,7 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetAvanadeFeatureBlock()
         {
-           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock, 5);
+           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock, 20);
            return featureBlockElement; 
         }
 

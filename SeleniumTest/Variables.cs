@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,7 +15,8 @@ namespace SeleniumTest
     public class Variables
     {
         public static IWebDriver driver;
-        
+
+
         public static void Init()
         {
          

@@ -20,7 +20,7 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetsearchResultElement()
         {
-            var searchResultElement = CommonHelpers.FindWebElement(searchResult, 5);
+            var searchResultElement = CommonHelpers.FindWebElement(searchResult, 20);
             return searchResultElement;
         }
 
