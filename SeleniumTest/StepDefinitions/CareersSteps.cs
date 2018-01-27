@@ -43,8 +43,11 @@ namespace SeleniumTest.StepDefinitions
         [When(@"I select ""(.*)"" location")]
         public void ISelectLocation(String location)
         {
+
+            Actions action = new Actions(driver);
             careersPage.GetLocationDropDown().Click();
-            careersPage.GetCountryElement(location).Click();
+            action.MoveToElement(careersPage.GetCountryElement(location)).Perform();
+          //  careersPage.GetCountryElement(location).Click();
 
         }
 

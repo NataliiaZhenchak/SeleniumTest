@@ -24,6 +24,7 @@ namespace SeleniumTest.StepDefinitions
         public void IAmOnHomePage()
         {
             Assert.IsTrue(homePage.GetAvanadeFeatureBlock().Displayed, "Eleement not present");
+            Thread.Sleep(3000);
 
         }
 
@@ -32,8 +33,6 @@ namespace SeleniumTest.StepDefinitions
         {
             Actions action = new Actions(driver);
             action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
-            //Thread.Sleep(5000);
-           // homePage.GetNavigationBarElement(elementName).Click();
 
 
         }

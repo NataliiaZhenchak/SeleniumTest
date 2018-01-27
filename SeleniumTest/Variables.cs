@@ -6,6 +6,7 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +28,9 @@ namespace SeleniumTest
             }
             else if (browser == "IE")
             {
-                
+
                 InternetExplorerOptions options = new InternetExplorerOptions();
-                options.EnableNativeEvents = false;
+                options.EnableNativeEvents = true;
                 options.UnhandledPromptBehavior = UnhandledPromptBehavior.Accept;
                 options.IgnoreZoomLevel = true;
                 options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
