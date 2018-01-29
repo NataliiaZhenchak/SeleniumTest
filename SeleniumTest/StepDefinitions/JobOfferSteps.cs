@@ -34,7 +34,7 @@ namespace SeleniumTest.StepDefinitions
         {
             //Actions action = new Actions(driver);
             //action.MoveToElement(jobOfferPage.GetQualificationElement(qualificationType)).Perform();
-            ((IJavaScriptExecutor)driver).ExecuteScript("javascript:window.scrollBy(250,350)", jobOfferPage.GetQualificationElement(qualificationType));
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", jobOfferPage.GetQualificationElement(qualificationType));
             Thread.Sleep(1000);
             Assert.AreEqual(qualificationType, jobOfferPage.GetQualificationElement(qualificationType).Text, "Results are incorrect");
 

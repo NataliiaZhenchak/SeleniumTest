@@ -21,7 +21,7 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetAvanadeFeatureBlock()
         {
-           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock, 20);
+           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock, 30);
            return featureBlockElement; 
         }
 
@@ -44,7 +44,7 @@ namespace SeleniumTest.Pages
         public IWebElement GetDropDownElement(string elementName)
         {
             var elementXPath = GetDropDownItemXPath(elementName);
-            var dropDownElement = CommonHelpers.FindWebElement(elementXPath);
+            var dropDownElement = CommonHelpers.FindWebElement(elementXPath, 30);
             return dropDownElement;
         }
 

@@ -20,13 +20,13 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetsearchResultElement()
         {
-            var searchResultElement = CommonHelpers.FindWebElement(searchResult, 20);
+            var searchResultElement = CommonHelpers.FindWebElement(searchResult, 30);
             return searchResultElement;
         }
 
         public IWebElement GetAllSearchResultElement()
         {
-            var allSearchResultElement = CommonHelpers.FindWebElement(allSearchResult, 5);
+            var allSearchResultElement = CommonHelpers.FindWebElement(allSearchResult, 30);
             return allSearchResultElement;
         }
 
@@ -38,7 +38,7 @@ namespace SeleniumTest.Pages
         public IWebElement GetOfferElement(string elementName)
         {
             var elementXPath = GetOfferItemXPath(elementName);
-            var offerElement = CommonHelpers.FindWebElement(elementXPath, 5);
+            var offerElement = CommonHelpers.FindWebElement(elementXPath, 30);
             return offerElement;
         }
 

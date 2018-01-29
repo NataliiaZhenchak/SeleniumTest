@@ -23,10 +23,11 @@ namespace SeleniumTest.StepDefinitions
             searchPage = new SearchJobsPage(driver);
         }
 
-        [Then(@"""(.*)"" of serach are shown")]
+        [Then(@"""(.*)"" of search are shown")]
         public void VerifySearchResults(String result)
         {
-         
+
+            Thread.Sleep(5000);
             Assert.AreEqual(result, searchPage.GetsearchResultElement().Text, "Search results are incorrect");
 
         }
@@ -41,6 +42,7 @@ namespace SeleniumTest.StepDefinitions
         [When(@"I select ""(.*)"" offer")]
         public void ISelectOffer(String offerName)
         {
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", searchPage.GetOfferElement(offerName));
             searchPage.GetOfferElement(offerName).Click();
 
         }

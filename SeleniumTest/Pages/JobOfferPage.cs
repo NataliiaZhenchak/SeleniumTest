@@ -17,7 +17,7 @@ namespace SeleniumTest.Pages
         }
         public IWebElement GetOfferTitle()
         {
-            var offerTitleElement = CommonHelpers.FindWebElement(offerTitle);
+            var offerTitleElement = CommonHelpers.FindWebElement(offerTitle, 30);
             return offerTitleElement;
         }
 
@@ -29,7 +29,7 @@ namespace SeleniumTest.Pages
         public IWebElement GetQualificationElement(string elementName)
         {
             var elementXPath = GetQualificationItemXPath(elementName);
-            var qalificationElement = CommonHelpers.FindWebElement(elementXPath);
+            var qalificationElement = CommonHelpers.FindWebElement(elementXPath, 30);
             return qalificationElement;
         }
 

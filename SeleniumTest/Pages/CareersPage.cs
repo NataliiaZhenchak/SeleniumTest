@@ -24,14 +24,14 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetSearchField()
         {
-            var searchFieldElement = CommonHelpers.FindWebElement(searchField);
+            var searchFieldElement = CommonHelpers.FindWebElement(searchField, 30);
             return searchFieldElement;
         }
        
 
         public IWebElement GetLocationDropDown()
         {
-            var dropDownElement = CommonHelpers.FindWebElement(locationsDropDown);
+            var dropDownElement = CommonHelpers.FindWebElement(locationsDropDown, 30);
             return dropDownElement;
         }
 
@@ -44,13 +44,13 @@ namespace SeleniumTest.Pages
         public IWebElement GetCountryElement(string elementName)
         {
             var elementXPath = GetCountryItemXPath(elementName);
-            var countryElement = CommonHelpers.FindWebElement(elementXPath);
+            var countryElement = CommonHelpers.FindWebElement(elementXPath, 30);
             return countryElement;
         }
 
         public IWebElement GetSearchButton()
         {
-            var searchButtonElement = CommonHelpers.FindWebElement(searchButton);
+            var searchButtonElement = CommonHelpers.FindWebElement(searchButton, 30);
             return searchButtonElement;
         }
 

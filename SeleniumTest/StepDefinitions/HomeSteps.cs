@@ -33,6 +33,7 @@ namespace SeleniumTest.StepDefinitions
         {
             Actions action = new Actions(driver);
             action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
+            Thread.Sleep(3000);
 
 
         }
