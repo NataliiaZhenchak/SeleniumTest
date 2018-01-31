@@ -144,11 +144,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 35
  testRunner.And("I click Search button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 36
- testRunner.And("I select \"Business Solution Architect - Houston, TX\" offer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I select \"Senior Analyst, Advanced Analytics\" offer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
- testRunner.Then("\"Business Solution Architect - Houston, TX\" offer is shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("\"Senior Analyst, Advanced Analytics\" offer is shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 38
- testRunner.And("I can see \"You are flexible with travel.\" qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can see \"Experience in structured problem-solving assignments.\" qualification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

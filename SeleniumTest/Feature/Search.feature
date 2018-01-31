@@ -33,6 +33,6 @@ Scenario: Verify qualification for job offer
 	And I scroll to "Sweden" location
 	And I select "United States" location
 	And I click Search button
-	And I select "Business Solution Architect - Houston, TX" offer
-	Then "Business Solution Architect - Houston, TX" offer is shown
-	And I can see "You are flexible with travel." qualification
+	And I select "Senior Analyst, Advanced Analytics" offer
+	Then "Senior Analyst, Advanced Analytics" offer is shown
+	And I can see "Experience in structured problem-solving assignments." qualification

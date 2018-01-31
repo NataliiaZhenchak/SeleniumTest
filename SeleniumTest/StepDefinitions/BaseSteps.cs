@@ -26,7 +26,7 @@ namespace SeleniumTest
         [AfterScenario]
         public void AfterScenario()
         {
-           // driver.Close();
+           driver.Close();
         }
 
     }

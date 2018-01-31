@@ -1,6 +1,6 @@
 @pushd %~dp0
 
-%windir%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe ""
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe" ""
 
 @if ERRORLEVEL 1 goto end
 
@@ -9,7 +9,7 @@
 @set profile=%1
 @if "%profile%" == "" set profile=Default
 
-SpecRun.exe run %profile%.srprofile "/baseFolder:%~dp0\bin\Debug" /log:specrun.log %2 %3 %4 %5
+SpecRun.exe run %profile%.srprofile "/baseFolder:%~dp0\bin\FireFox" /log:specrun.log %2 %3 %4 %5
 
 :end
 
