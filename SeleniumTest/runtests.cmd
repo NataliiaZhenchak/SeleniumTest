@@ -1,8 +1,7 @@
 @pushd %~dp0
 
 "%MSBuild_PATH%MSBuild.exe" ""
-echo lala
-echo %MSBuild_PATH%
+
 @if ERRORLEVEL 1 goto end
 
 @cd ..\packages\SpecRun.Runner.*\tools
