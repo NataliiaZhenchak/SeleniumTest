@@ -14,3 +14,6 @@ To run tests from command line you need:
 3. Enter runtests command to run Default test configuration (Chrome)
 4. Enter runtests FireFox to run tests in Firefox browser
 5. Enter runtests IE to run tests in IE browser (note IE is very slow and tests are failing very often because of this reason)
+
+NOTE: when you are running tests in Firefox it is advised to have installed Firefox Nightly latest version because Firefox WebDriver works 
+best with this version.
