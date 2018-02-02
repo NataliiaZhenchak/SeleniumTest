@@ -26,37 +26,26 @@ namespace SeleniumTest.StepDefinitions
         [When(@"I scroll to Search field")]
         public void IScrollToSearchField()
         {
-            //Actions action = new Actions(driver);
             ((IJavaScriptExecutor)driver).ExecuteScript("javascript:window.scrollBy(250,350)", careersPage.GetSearchField());
-            //Thread.Sleep(1000);
-            //  action.MoveToElement(careersPage.GetSearchField()).Perform();
-
 
         }
         [When(@"I eneter ""(.*)"" in Search field")]
         public void IEneterTextInSearchField(String keyword)
         {
             careersPage.GetSearchField().SendKeys(keyword);
-           // Thread.Sleep(3000);
-
-
         }
 
         [When(@"I click locations drop down")]
         public void IClickDropDown()
         {
             careersPage.GetLocationDropDown().Click();
-           // Thread.Sleep(3000);
-
         }
 
         [When(@"I scroll to ""(.*)"" location")]
         public void IScrollToLocation(String countryName)
         {
-
            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", careersPage.GetCountryElement(countryName));
-            // Thread.Sleep(1000);
-
+ 
         }
 
         [When(@"I select ""(.*)"" location")]
@@ -71,9 +60,7 @@ namespace SeleniumTest.StepDefinitions
         public void IClickSearch()
         {
             careersPage.GetSearchButton().Click();
-            //Thread.Sleep(2000);
-
-
+  
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SeleniumTest.CommonHelpers;
 
 namespace SeleniumTest.Pages
 {
@@ -16,7 +17,6 @@ namespace SeleniumTest.Pages
 
         public string searchButton = "//*[@id='jobsearchclick']";
 
-
         public CareersPage(IWebDriver driver)
             :base(driver)
         {
@@ -24,17 +24,16 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetSearchField()
         {
-            var searchFieldElement = CommonHelpers.FindWebElement(searchField, 30);
+            var searchFieldElement = FindWebElement(searchField, 30);
             return searchFieldElement;
         }
        
 
         public IWebElement GetLocationDropDown()
         {
-            var dropDownElement = CommonHelpers.FindWebElement(locationsDropDown, 30);
+            var dropDownElement = FindWebElement(locationsDropDown, 30);
             return dropDownElement;
         }
-
 
         private string GetCountryItemXPath(string countryName)
         {
@@ -44,18 +43,15 @@ namespace SeleniumTest.Pages
         public IWebElement GetCountryElement(string elementName)
         {
             var elementXPath = GetCountryItemXPath(elementName);
-            var countryElement = CommonHelpers.FindWebElement(elementXPath, 30);
+            var countryElement = FindWebElement(elementXPath, 30);
             return countryElement;
         }
 
         public IWebElement GetSearchButton()
         {
-            var searchButtonElement = CommonHelpers.FindWebElement(searchButton, 30);
+            var searchButtonElement = FindWebElement(searchButton, 30);
             return searchButtonElement;
         }
-
-
-
 
     }
 }

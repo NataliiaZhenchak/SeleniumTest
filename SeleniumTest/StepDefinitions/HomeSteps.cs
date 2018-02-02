@@ -25,7 +25,6 @@ namespace SeleniumTest.StepDefinitions
         {
             Assert.IsTrue(homePage.GetAvanadeFeatureBlock().Displayed, "Eleement not present");
             Thread.Sleep(3000);
-
         }
 
         [When(@"I go to ""(.*)"" drop down")]
@@ -34,8 +33,6 @@ namespace SeleniumTest.StepDefinitions
             Actions action = new Actions(driver);
             action.MoveToElement(homePage.GetNavigationBarElement(elementName)).Perform();
             Thread.Sleep(3000);
-
-
         }
 
         [When(@"I clcik ""(.*)"" item")]

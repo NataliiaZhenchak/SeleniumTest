@@ -32,12 +32,9 @@ namespace SeleniumTest.StepDefinitions
         [Then(@"I can see ""(.*)"" qualification")]
         public void IScrollToQualifications(String qualificationType)
         {
-            //Actions action = new Actions(driver);
-            //action.MoveToElement(jobOfferPage.GetQualificationElement(qualificationType)).Perform();
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", jobOfferPage.GetQualificationElement(qualificationType));
             Thread.Sleep(1000);
             Assert.AreEqual(qualificationType, jobOfferPage.GetQualificationElement(qualificationType).Text, "Results are incorrect");
-
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SeleniumTest.CommonHelpers;
 
 namespace SeleniumTest.Pages
 {
@@ -20,13 +21,13 @@ namespace SeleniumTest.Pages
 
         public IWebElement GetsearchResultElement()
         {
-            var searchResultElement = CommonHelpers.FindWebElement(searchResult, 30);
+            var searchResultElement = FindWebElement(searchResult, 30);
             return searchResultElement;
         }
 
         public IWebElement GetAllSearchResultElement()
         {
-            var allSearchResultElement = CommonHelpers.FindWebElement(allSearchResult, 30);
+            var allSearchResultElement = FindWebElement(allSearchResult, 30);
             return allSearchResultElement;
         }
 
@@ -38,7 +39,7 @@ namespace SeleniumTest.Pages
         public IWebElement GetOfferElement(string elementName)
         {
             var elementXPath = GetOfferItemXPath(elementName);
-            var offerElement = CommonHelpers.FindWebElement(elementXPath, 30);
+            var offerElement = FindWebElement(elementXPath, 30);
             return offerElement;
         }
 

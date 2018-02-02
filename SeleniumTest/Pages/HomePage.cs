@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static SeleniumTest.CommonHelpers;
 
 namespace SeleniumTest.Pages
 {
@@ -13,41 +14,36 @@ namespace SeleniumTest.Pages
     {
         public string avanadeFeatureBlock = "//h1[@class='feature-title']";
 
-
         public HomePage(IWebDriver driver)
             :base(driver)
         {
         }
-
         public IWebElement GetAvanadeFeatureBlock()
         {
-           var featureBlockElement = CommonHelpers.FindWebElement(avanadeFeatureBlock, 30);
+           var featureBlockElement = FindWebElement(avanadeFeatureBlock, 30);
            return featureBlockElement; 
         }
 
         public IWebElement GetNavigationBarElement(string elementName)
         {
             var elementXPath = GetNavigationBarElementXPath(elementName);
-            var navigationBarElement = CommonHelpers.FindWebElement(elementXPath);
+            var navigationBarElement = FindWebElement(elementXPath);
             return navigationBarElement;
         }
         private string GetNavigationBarElementXPath(string elementName)
         {
             return "//div[@id='main-navbar']//a[text()='" + elementName + "']";
         }
-
         private string GetDropDownItemXPath(string itemName)
         {
             return "//ul[@class='dropdown-menu second-dropdown lessthan10']/li/a[text()='" + itemName + "']";
         }
-
         public IWebElement GetDropDownElement(string elementName)
         {
             var elementXPath = GetDropDownItemXPath(elementName);
-            var dropDownElement = CommonHelpers.FindWebElement(elementXPath, 30);
+            var dropDownElement = FindWebElement(elementXPath, 30);
             return dropDownElement;
         }
-
 
     }
 }
